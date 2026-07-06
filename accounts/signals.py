@@ -27,4 +27,5 @@ def profile_deleted(sender, instance, **kwargs):
 
 @receiver(payment_successfull)
 def payment_completed(sender, amount, user, **kwargs):
-    print(f"Payment of {amount} was successful for user {user.username}.")
+    print(f"Payment received from {user.username}")
+    print(f"Amount:{amount}")
